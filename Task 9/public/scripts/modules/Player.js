@@ -8,11 +8,7 @@ export default class Player {
         const fullNameTtl = document.createElement("h3");
         fullNameTtl.textContent =
             this.player.firstName + " " + this.player.lastName;
-        const googleSearchLink = document.createElement("a");
-        googleSearchLink.href = this.player.googleSearch;
-        googleSearchLink.textContent = "Search on Google";
-        googleSearchLink.target = "_blank";
-        playerCard.append(fullNameTtl, googleSearchLink);
+        playerCard.append(fullNameTtl);
         return playerCard;
     }
 }

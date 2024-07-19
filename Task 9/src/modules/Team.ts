@@ -1,33 +1,30 @@
-// import { Player as PlayerT } from "./types.js";
-// import Player from "./Player.js";
-
 export default class Team {
+  id: number;
   teamName: string;
   abbreviation: string;
   simpleName: string;
   location: string;
-  // players: PlayerT[];
 
   constructor(
+    id: number,
     teamName: string,
     abbreviation: string,
     simpleName: string,
     location: string
-    // players: PlayerT[]
   ) {
+    this.id = id;
     this.teamName = teamName;
     this.abbreviation = abbreviation;
     this.simpleName = simpleName;
     this.location = location;
-    // this.players = players;
   }
 
   render() {
     const teamCard = document.createElement("div");
+    teamCard.classList.add("teamCard");
 
     const teamTtl = document.createElement("h2");
     teamTtl.textContent = this.teamName;
-    teamCard.classList.add("teamCard");
 
     const teamAbbr = document.createElement("h4");
     teamAbbr.textContent = this.abbreviation;
@@ -40,14 +37,9 @@ export default class Team {
 
     const playersBtn = document.createElement("button");
     playersBtn.textContent = "Players";
-    playersBtn.classList.add("playersBrn");
+    playersBtn.classList.add("playersBtn");
 
     teamCard.append(teamTtl, teamAbbr, teamSimpleName, teamLoc, playersBtn);
-
-    // this.players.forEach((player) => {
-    //   const nbaTeamPlayer = new Player(player);
-    //   teamCard.appendChild(nbaTeamPlayer.render());
-    // });
 
     return teamCard;
   }

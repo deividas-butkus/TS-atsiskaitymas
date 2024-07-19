@@ -1,5 +1,6 @@
 export default class Team {
-    constructor(teamName, abbreviation, simpleName, location) {
+    constructor(id, teamName, abbreviation, simpleName, location) {
+        this.id = id;
         this.teamName = teamName;
         this.abbreviation = abbreviation;
         this.simpleName = simpleName;
@@ -7,9 +8,9 @@ export default class Team {
     }
     render() {
         const teamCard = document.createElement("div");
+        teamCard.classList.add("teamCard");
         const teamTtl = document.createElement("h2");
         teamTtl.textContent = this.teamName;
-        teamCard.classList.add("teamCard");
         const teamAbbr = document.createElement("h4");
         teamAbbr.textContent = this.abbreviation;
         const teamSimpleName = document.createElement("h4");
@@ -18,7 +19,7 @@ export default class Team {
         teamLoc.textContent = this.location;
         const playersBtn = document.createElement("button");
         playersBtn.textContent = "Players";
-        playersBtn.classList.add("playersBrn");
+        playersBtn.classList.add("playersBtn");
         teamCard.append(teamTtl, teamAbbr, teamSimpleName, teamLoc, playersBtn);
         return teamCard;
     }
