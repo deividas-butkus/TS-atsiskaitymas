@@ -70,7 +70,7 @@ function showTeamsDialog(teamId: number) {
   dialog.classList.add("dialog");
 
   const dialogContent = document.createElement("div");
-  dialogContent.classList.add("modal-content");
+  dialogContent.classList.add("modalContent");
 
   const dialogTtl = document.createElement("h2");
   dialogTtl.textContent = team.teamName;
@@ -79,6 +79,7 @@ function showTeamsDialog(teamId: number) {
   teamPlayers.forEach((player) => {
     const playerFullName = document.createElement("h3");
     playerFullName.textContent = player.firstName + " " + player.lastName;
+
     dialogContent.appendChild(playerFullName);
   });
 
@@ -86,6 +87,7 @@ function showTeamsDialog(teamId: number) {
 
   const closeButton = document.createElement("button");
   closeButton.textContent = "Close";
+  closeButton.classList.add("closeDialog");
   closeButton.onclick = () => {
     document.body.removeChild(dialog);
   };

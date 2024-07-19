@@ -42,7 +42,7 @@ function showTeamsDialog(teamId) {
     const dialog = document.createElement("dialog");
     dialog.classList.add("dialog");
     const dialogContent = document.createElement("div");
-    dialogContent.classList.add("modal-content");
+    dialogContent.classList.add("modalContent");
     const dialogTtl = document.createElement("h2");
     dialogTtl.textContent = team.teamName;
     dialogContent.appendChild(dialogTtl);
@@ -54,6 +54,7 @@ function showTeamsDialog(teamId) {
     dialog.appendChild(dialogContent);
     const closeButton = document.createElement("button");
     closeButton.textContent = "Close";
+    closeButton.classList.add("closeDialog");
     closeButton.onclick = () => {
         document.body.removeChild(dialog);
     };
