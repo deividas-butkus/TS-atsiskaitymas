@@ -33,7 +33,7 @@ two = {
 type Three = {
   vardas: string;
   pavarde: string;
-  lytis: "vyras" | "moteris";
+  lytis?: "vyras" | "moteris";
 };
 let three: Three = {
   vardas: "",
@@ -45,8 +45,8 @@ three = {
   pavarde: "",
   lytis: "moteris",
 };
-// three = {
-//   vardas: "",
-//   pavarde: "",
-//   // lytis: "sraigtasparnis", // error
-// };
+three = {
+  vardas: "",
+  pavarde: "",
+  // lytis: "sraigtasparnis", // error
+};
