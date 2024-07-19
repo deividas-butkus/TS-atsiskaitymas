@@ -6,28 +6,32 @@ Pastaba: Aprašyto tipo NEKEISTI
 -------------------------------------------------------------------------- */
 
 type TipasNaudoti = {
-  marke: string,
-  modelis: string,
-  metai: number,
-  spalva: string,
-  kilometrazas: number
+  marke: string;
+  modelis: string;
+  metai: number;
+  spalva: string;
+  kilometrazas: number;
 };
 
-const dviratis = {
+type Dviratis = Omit<TipasNaudoti, "marke" | "modelis" | "kilometrazas">;
+type NaujaMasina = Omit<TipasNaudoti, "kilometrazas">;
+type SenaMasina = TipasNaudoti & { surudyjesDugnas: boolean };
+
+const dviratis: Dviratis = {
   metai: 1999,
-  spalva: ''
+  spalva: "",
 };
-const naujaMasina = {
-  marke: '',
-  modelis: '',
+const naujaMasina: NaujaMasina = {
+  marke: "",
+  modelis: "",
   metai: 2025,
-  spalva: ''
+  spalva: "",
 };
-const senaMasina = {
-  marke: '',
-  modelis: '',
+const senaMasina: SenaMasina = {
+  marke: "",
+  modelis: "",
   metai: 2025,
-  spalva: '',
+  spalva: "",
   kilometrazas: 999999,
-  surudyjesDugnas: true  
+  surudyjesDugnas: true,
 };
