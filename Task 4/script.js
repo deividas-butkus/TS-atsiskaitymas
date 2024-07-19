@@ -6,14 +6,13 @@ Pvz.:
   "kebabas" --> 1010101
   "a"       --> 1
 -------------------------------------------------------------------------- */
-
-const convertText = (text: string): number => {
-  // if (text.length === 0) {
-  //   return 0;
-  // }
-  let result = "1";
-  for (let i = 1; i < text.length; i++) {
-    result += i % 2 === 0 ? "1" : "0";
-  }
-  return parseInt(result);
+var convertText = function (text) {
+    // if (text.length === 0) {
+    //   return 0;
+    // }
+    var result = "1";
+    for (var i = 1; i < text.length; i++) {
+        result += i % 2 === 0 ? "1" : "0";
+    }
+    return parseInt(result);
 };
