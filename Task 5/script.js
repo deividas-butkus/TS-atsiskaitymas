@@ -11,7 +11,7 @@ var checkWinner = function (p1Bet, p2Bet) {
     if (p1Bet === p2Bet) {
         return "Draw!";
     }
-    if ((p1Bet === "rock" && p2Bet === "scissors") ||
+    else if ((p1Bet === "rock" && p2Bet === "scissors") ||
         (p1Bet === "scissors" && p2Bet === "paper") ||
         (p1Bet === "paper" && p2Bet === "rock")) {
         return "Player 1 won!";

@@ -13,8 +13,7 @@ type Bet = "scissors" | "paper" | "rock";
 const checkWinner = (p1Bet: Bet, p2Bet: Bet): string => {
   if (p1Bet === p2Bet) {
     return "Draw!";
-  }
-  if (
+  } else if (
     (p1Bet === "rock" && p2Bet === "scissors") ||
     (p1Bet === "scissors" && p2Bet === "paper") ||
     (p1Bet === "paper" && p2Bet === "rock")

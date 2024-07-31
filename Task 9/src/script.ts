@@ -36,7 +36,6 @@ fetch(TEAMS_ENDPOINT)
       const button = teamEl.querySelector(".playersBtn");
       if (button) {
         button.addEventListener("click", () => {
-          console.log(`Button clicked for team ID: ${team.id}`);
           showTeamsDialog(team.id);
         });
       } else {
@@ -57,7 +56,6 @@ function getPlayersByTeamId(teamId: number): Player[] {
 }
 
 function showTeamsDialog(teamId: number) {
-  console.log(`Showing dialog for team ID: ${teamId}`);
   const team = teamsData.find((team) => team.id === teamId);
   if (!team) {
     alert("Team not found.");

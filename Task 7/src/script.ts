@@ -1,5 +1,4 @@
-import { TeamsData } from "./modules/types.js";
-import { Team as TeamT } from "./modules/types.js";
+import { TeamsData, Team as TeamT } from "./modules/types.js";
 import Team from "./modules/Team.js";
 
 /* ------------------------------ TASK 7 -----------------------------------

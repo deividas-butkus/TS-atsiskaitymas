@@ -13,7 +13,7 @@ type TipasNaudoti = {
   kilometrazas: number;
 };
 
-type Dviratis = Omit<TipasNaudoti, "marke" | "modelis" | "kilometrazas">;
+type Dviratis = Pick<TipasNaudoti, "metai" | "spalva">;
 type NaujaMasina = Omit<TipasNaudoti, "kilometrazas">;
 type SenaMasina = TipasNaudoti & { surudyjesDugnas: boolean };
 
